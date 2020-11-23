@@ -48,6 +48,7 @@ Selector labels
 {{- define "minikubegitlab.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "minikubegitlab.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
+app: {{ include "minikubegitlab.name" . }}
 {{- end }}
 
 {{/*
